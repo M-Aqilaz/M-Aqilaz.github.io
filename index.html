@@ -582,6 +582,158 @@
       font-weight: 700;
     }
 
+    /* Neobrutalist Project Slider */
+    .slider-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .slider-tab-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 7px 14px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: var(--card-bg);
+      color: var(--text);
+      cursor: pointer;
+      box-shadow: 2px 2px 0 var(--border);
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .slider-tab-btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 3px 3px 0 var(--border);
+    }
+
+    .slider-tab-btn.active {
+      background: var(--yellow);
+      color: #000;
+      box-shadow: 2px 2px 0 var(--border);
+      transform: translate(1px, 1px);
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      border: 3px solid var(--border);
+      box-shadow: 5px 5px 0 var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .slider-stage {
+      position: relative;
+      width: 100%;
+      height: 310px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #090d16;
+    }
+
+    .slider-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.28s ease, transform 0.28s ease;
+      transform: scale(0.98);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider-slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    .slider-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slider-stage:hover .zoom-pill {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .slider-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--yellow);
+      color: #000;
+      border: 2px solid #000;
+      box-shadow: 3px 3px 0 #000;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .slider-nav-btn:hover {
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 4px 4px 0 #000;
+    }
+
+    .slider-nav-btn:active {
+      transform: translateY(-50%) scale(0.96);
+    }
+
+    .slider-nav-prev { left: 12px; }
+    .slider-nav-next { right: 12px; }
+
+    .slider-meta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      border-top: 2px solid var(--border);
+      padding: 8px 14px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      background: var(--bg);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .slider-dot.active {
+      background: var(--pink);
+      transform: scale(1.2);
+    }
+
     /* Modal Image Lightbox */
     .lightbox-modal {
       position: fixed;
@@ -930,66 +1082,83 @@
 
       <div class="projects-grid">
 
-        <!-- PROJECT 1: MAPECO (FEATURED WITH SCREENSHOT) -->
+        <!-- PROJECT 1: MAPECO (UNIFIED WITH n8n AUTOMATION PIPELINE) -->
         <div class="project-card project-card-featured">
           <div>
             <div class="project-top">
-              <h3 class="project-title">MAPECO — Geospatial & Economics Intelligence</h3>
-              <span class="neo-badge" style="background: var(--yellow);">Frontend & Analytics</span>
+              <h3 class="project-title">MAPECO — Geospatial Intelligence & Automated n8n Pipeline</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <span class="neo-badge" style="background: var(--yellow);">📊 Geointelligence Dashboard</span>
+              <span class="neo-badge" style="background: var(--purple); color: #fff;">⚙️ n8n Automation Engine</span>
             </div>
             <p class="project-desc">
-              Dashboard intelijen geospasial & pemantauan risiko wilayah Indonesia secara realtime. Menampilkan visualisasi interaktif peta risiko wilayah, <strong>Analisis Sentimen Berita NLP</strong> (1.500+ pemberitaan terolah AI), radar tren isu provinsi, hingga indikator pangan & makro ekonomi nasional. Data disuplai dan diperbarui secara otomatis oleh pipeline n8n.
+              Sistem intelijen geospasial terintegrasi yang memantau risiko wilayah Indonesia secara realtime dengan backend otomasi cerdas. <strong>Pipeline n8n</strong> bertugas melakukan <em>grab data</em> RSS berita multi-provinsi secara otomatis, mengelola antrean pemrosesan AI untuk ekstraksi sentimen NLP, memperbarui database terstruktur secara berkala, dan menangani auto-recovery. Hasilnya divisualisasikan langsung pada <strong>Dashboard MAPECO</strong> lengkap dengan peta risiko interaktif (1.500+ pemberitaan terolah), radar sentimen isu regional, serta indikator pangan dan makro ekonomi nasional.
             </p>
             <div class="tech-stack-row">
+              <span class="tech-pill">n8n Workflow Engine</span>
               <span class="tech-pill">Geospatial Intelligence</span>
               <span class="tech-pill">NLP Sentiment Analysis</span>
-              <span class="tech-pill">Data Pipeline</span>
-              <span class="tech-pill">Risk Scoring</span>
-              <span class="tech-pill">Economic Indicators</span>
-            </div>
-            <div class="doodle-font" style="color: var(--pink); font-size: 1.15rem;">
-              Klik gambar untuk melihat resolusi penuh 🔍
-            </div>
-          </div>
-          <div>
-            <div class="project-thumb-box" onclick="openLightbox('mapeco_dashboard.png')">
-              <img src="mapeco_dashboard.png" alt="MAPECO Geospatial & Economics Intelligence Dashboard" class="project-thumb-img project-thumb-img-featured">
-              <div class="zoom-pill">🔍 Klik untuk Zoom</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 2: n8n AUTOMATION WORKFLOW (FEATURED WITH SCREENSHOT) -->
-        <div class="project-card project-card-featured" style="grid-column: 1 / -1; margin-top: 10px;">
-          <div>
-            <div class="project-top">
-              <h3 class="project-title">MAPECO Data Engine — n8n & AI Pipeline</h3>
-              <span class="neo-badge" style="background: var(--purple); color: #fff;">Backend & Orchestration</span>
-            </div>
-            <p class="project-desc">
-              Arsitektur pipeline data otomatis di balik platform MAPECO menggunakan <strong>n8n</strong>. Bertugas melakukan <em>grab data</em> RSS berita multi-provinsi, mengantrekan proses (<em>job queue worker</em>), memicu pengolahan teks oleh model AI untuk analisis sentimen, memperbarui database terstruktur secara berkala, serta menangani auto-recovery jika ada proses yang terhenti.
-            </p>
-            <div class="tech-stack-row">
-              <span class="tech-pill">n8n Orchestration</span>
+              <span class="tech-pill">Automated RSS Ingestion</span>
               <span class="tech-pill">Job Queue Workers</span>
-              <span class="tech-pill">RSS Scraper</span>
-              <span class="tech-pill">Auto Recovery</span>
+              <span class="tech-pill">Risk Scoring Model</span>
               <span class="tech-pill">Webhooks</span>
             </div>
             <div class="doodle-font" style="color: var(--pink); font-size: 1.15rem;">
-              Arsitektur pipeline nyata & teruji di lapangan ⚙️
+              Geser slide di samping untuk melihat UI Dashboard & Alur Pipeline ⤹
             </div>
           </div>
+
           <div>
-            <div class="project-thumb-box" onclick="openLightbox('n8n_workflow.png')">
-              <img src="n8n_workflow.png" alt="n8n Multi-Stage Workflow Orchestration Pipeline" class="project-thumb-img project-thumb-img-featured">
-              <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+            <!-- Neobrutalist Dual-View Slider -->
+            <div class="slider-tabs">
+              <button class="slider-tab-btn active" id="tabMapeco0" onclick="setMapecoSlide(0)">
+                📊 1. Frontend Dashboard
+              </button>
+              <button class="slider-tab-btn" id="tabMapeco1" onclick="setMapecoSlide(1)">
+                ⚙️ 2. n8n Automation Workflow
+              </button>
+            </div>
+
+            <div class="slider-container">
+              <div class="slider-stage" id="mapecoStage" onclick="openActiveMapecoLightbox()">
+                <!-- Slide 0: Dashboard -->
+                <div class="slider-slide active" id="mapecoSlide0">
+                  <img src="mapeco_dashboard.png" alt="MAPECO Geospatial & Economics Intelligence Dashboard">
+                </div>
+                <!-- Slide 1: n8n Workflow -->
+                <div class="slider-slide" id="mapecoSlide1">
+                  <img src="n8n_workflow.png" alt="n8n Automated Data Grab & Queue Ingestion Workflow">
+                </div>
+
+                <div class="zoom-pill">🔍 Klik untuk Full Resolution</div>
+
+                <!-- Nav Arrows -->
+                <button class="slider-nav-btn slider-nav-prev" onclick="event.stopPropagation(); prevMapecoSlide();" title="Previous Slide" aria-label="Previous Slide">‹</button>
+                <button class="slider-nav-btn slider-nav-next" onclick="event.stopPropagation(); nextMapecoSlide();" title="Next Slide" aria-label="Next Slide">›</button>
+              </div>
+
+              <!-- Meta Footer Bar -->
+              <div class="slider-meta-bar">
+                <div id="mapecoCaption">📊 MAPECO: Peta Risiko Wilayah & NLP Dashboard</div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <span id="mapecoCounter" style="color: var(--text-muted); font-size: 0.75rem;">1 / 2</span>
+                  <div class="slider-dots">
+                    <span class="slider-dot active" id="dotMapeco0" onclick="setMapecoSlide(0)"></span>
+                    <span class="slider-dot" id="dotMapeco1" onclick="setMapecoSlide(1)"></span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Nalarin.ai -->
+        <!-- PROJECT 2: Nalarin.ai -->
         <div class="project-card">
+          <div class="project-thumb-box" onclick="openLightbox('nalarin_dashboard.png')">
+            <img src="nalarin_dashboard.png" alt="Nalarin.ai Learning Platform Dashboard" class="project-thumb-img">
+            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+          </div>
           <div>
             <div class="project-top">
               <h3 class="project-title">Nalarin.ai</h3>
@@ -1014,15 +1183,19 @@
           </div>
         </div>
 
-        <!-- HoaxCheckML -->
+        <!-- PROJECT 3: HoaxCheckML -->
         <div class="project-card">
+          <div class="project-thumb-box" onclick="openLightbox('hoaxcheck_preview.png')">
+            <img src="hoaxcheck_preview.png" alt="HoaxCheck Studio Dataset Management & Scraper" class="project-thumb-img">
+            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+          </div>
           <div>
             <div class="project-top">
               <h3 class="project-title">HoaxCheckML</h3>
               <span class="neo-badge" style="background: var(--green);">ML & NLP</span>
             </div>
             <p class="project-desc">
-              Sistem klasifikasi teks dan verifikasi berita hoax berbahasa Indonesia berbasis NLP. Dilengkapi automated RSS feed scraper dari kantor berita terpercaya (Antara, CNN, CNBC) untuk kurasi dataset ground-truth serta dashboard analitik Flask.
+              Sistem klasifikasi teks dan verifikasi berita hoax berbahasa Indonesia berbasis NLP. Dilengkapi automated RSS feed scraper dari kantor berita terpercaya (Antara, CNN, CNBC) untuk kurasi dataset ground-truth serta studio web Flask interaktif.
             </p>
           </div>
           <div>
@@ -1040,15 +1213,19 @@
           </div>
         </div>
 
-        <!-- InterSelf -->
+        <!-- PROJECT 4: InterSelf -->
         <div class="project-card">
+          <div class="project-thumb-box" onclick="openLightbox('interself_preview.png')">
+            <img src="interself_preview.png" alt="InterSelf Gamified RPG Productivity Dashboard" class="project-thumb-img">
+            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+          </div>
           <div>
             <div class="project-top">
               <h3 class="project-title">InterSelf</h3>
               <span class="neo-badge" style="background: var(--cyan);">Gamification</span>
             </div>
             <p class="project-desc">
-              Aplikasi produktivitas berbasis gamifikasi yang mengubah target dan kebiasaan harian menjadi quest, pertarungan boss battle interaktif, streak konsistensi, dan leaderboard kompetitif dengan Prisma ORM.
+              Aplikasi produktivitas berbasis gamifikasi RPG yang mengubah target dan kebiasaan harian menjadi quest, pertarungan raid boss mingguan interaktif (Boss Battle), streak konsistensi, dan in-app economy menggunakan Prisma ORM dan Next.js 16.
             </p>
           </div>
           <div>
@@ -1294,6 +1471,57 @@
     }
 
     setTimeout(matrixDecode, 400);
+
+    // MAPECO Interactive Dual-View Slider
+    let currentMapecoSlide = 0;
+    const mapecoSlides = [
+      {
+        src: 'mapeco_dashboard.png',
+        caption: '📊 MAPECO: Peta Risiko Wilayah & NLP Dashboard'
+      },
+      {
+        src: 'n8n_workflow.png',
+        caption: '⚙️ n8n: Multi-Stage Workflow Orchestration Pipeline'
+      }
+    ];
+
+    function setMapecoSlide(index) {
+      currentMapecoSlide = index;
+      for (let i = 0; i < mapecoSlides.length; i++) {
+        const slide = document.getElementById(`mapecoSlide${i}`);
+        const tab = document.getElementById(`tabMapeco${i}`);
+        const dot = document.getElementById(`dotMapeco${i}`);
+        if (slide && tab && dot) {
+          if (i === index) {
+            slide.classList.add('active');
+            tab.classList.add('active');
+            dot.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+            tab.classList.remove('active');
+            dot.classList.remove('active');
+          }
+        }
+      }
+      const capEl = document.getElementById('mapecoCaption');
+      const countEl = document.getElementById('mapecoCounter');
+      if (capEl) capEl.textContent = mapecoSlides[index].caption;
+      if (countEl) countEl.textContent = `${index + 1} / ${mapecoSlides.length}`;
+    }
+
+    function nextMapecoSlide() {
+      const nextIndex = (currentMapecoSlide + 1) % mapecoSlides.length;
+      setMapecoSlide(nextIndex);
+    }
+
+    function prevMapecoSlide() {
+      const prevIndex = (currentMapecoSlide - 1 + mapecoSlides.length) % mapecoSlides.length;
+      setMapecoSlide(prevIndex);
+    }
+
+    function openActiveMapecoLightbox() {
+      openLightbox(mapecoSlides[currentMapecoSlide].src);
+    }
 
     // Lightbox Modal for Screenshots
     const lightboxModal = document.getElementById('lightboxModal');
