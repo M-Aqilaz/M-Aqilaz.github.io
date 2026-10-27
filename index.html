@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Aqil Azami | Full-Stack & AI Developer</title>
+  <title>Muhammad Aqil Azami | Full-Stack, AI & Automation Developer</title>
   <meta name="description" content="Portfolio of Muhammad Aqil Azami — Informatics Engineering Student @ Polinema, Full-Stack Web Developer, and AI/ML Enthusiast.">
   
   <!-- Favicon -->
@@ -80,11 +80,6 @@
       transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .neo-box-interactive:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: calc(var(--shadow-w) + 2px) calc(var(--shadow-w) + 2px) 0 var(--border);
-    }
-
     .neo-btn {
       display: inline-flex;
       align-items: center;
@@ -115,18 +110,9 @@
       box-shadow: 1px 1px 0 var(--border);
     }
 
-    .neo-btn-cyan {
-      background: var(--cyan);
-    }
-
-    .neo-btn-pink {
-      background: var(--pink);
-      color: #fff;
-    }
-
-    .neo-btn-white {
-      background: #fff;
-    }
+    .neo-btn-cyan { background: var(--cyan); }
+    .neo-btn-pink { background: var(--pink); color: #fff; }
+    .neo-btn-white { background: #fff; }
 
     .neo-badge {
       display: inline-block;
@@ -141,7 +127,6 @@
       color: #000;
     }
 
-    /* Handwriting doodle note */
     .doodle-font {
       font-family: 'Caveat', cursive;
       font-weight: 700;
@@ -149,7 +134,6 @@
       line-height: 1.1;
     }
 
-    /* Progress bar */
     .progress-bar {
       position: fixed;
       top: 0;
@@ -162,7 +146,6 @@
       transition: width 0.1s ease-out;
     }
 
-    /* Smart Navbar */
     .navbar {
       position: sticky;
       top: 15px;
@@ -258,14 +241,12 @@
       background: var(--yellow);
     }
 
-    /* Container */
     .container {
       max-width: 1080px;
       margin: 0 auto;
       padding: 40px 20px 80px;
     }
 
-    /* Hero Section */
     .hero {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -347,7 +328,6 @@
       color: #000;
     }
 
-    /* Avatar Card with Polaroid Tape */
     .avatar-wrapper {
       position: relative;
       display: flex;
@@ -397,7 +377,6 @@
       line-height: 1.1;
     }
 
-    /* Floating Stickers */
     .sticker {
       position: absolute;
       background: var(--yellow);
@@ -428,7 +407,6 @@
       transform: rotate(-8deg);
     }
 
-    /* Section Headers */
     .section {
       padding: 60px 0;
     }
@@ -448,7 +426,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* Spotlight Card */
     .spotlight-card {
       background: var(--card-bg);
       border: 3px solid var(--border);
@@ -487,7 +464,7 @@
       border: 3px solid var(--border);
       border-radius: 14px;
       box-shadow: 6px 6px 0 var(--border);
-      padding: 24px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -499,12 +476,79 @@
       box-shadow: 9px 9px 0 var(--border);
     }
 
+    .project-card-featured {
+      grid-column: 1 / -1;
+      background: var(--card-bg);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .project-card-featured {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-thumb-box {
+      width: 100%;
+      border: 3px solid var(--border);
+      box-shadow: 4px 4px 0 var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 14px;
+      background: #000;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .project-thumb-box:hover .zoom-pill {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .project-thumb-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .project-thumb-img-featured {
+      height: 260px;
+    }
+
+    .project-thumb-box:hover .project-thumb-img {
+      transform: scale(1.03);
+    }
+
+    .zoom-pill {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0;
+      background: var(--yellow);
+      color: #000;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 6px 12px;
+      border: 2px solid #000;
+      box-shadow: 3px 3px 0 #000;
+      border-radius: 6px;
+      pointer-events: none;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
     .project-top {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .project-title {
@@ -517,14 +561,14 @@
       font-size: 0.95rem;
       color: var(--text-muted);
       line-height: 1.55;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .tech-stack-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .tech-pill {
@@ -536,6 +580,52 @@
       background: var(--bg);
       color: var(--text);
       font-weight: 700;
+    }
+
+    /* Modal Image Lightbox */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      cursor: zoom-out;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 95%;
+      max-height: 90vh;
+      border: 4px solid var(--yellow);
+      box-shadow: 12px 12px 0 #000;
+      border-radius: 8px;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      background: var(--pink);
+      color: #fff;
+      border: 3px solid #000;
+      box-shadow: 4px 4px 0 #000;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
 
     /* Experience Timeline */
@@ -668,7 +758,6 @@
       font-weight: 600;
     }
 
-    /* Footer */
     .footer {
       border-top: 3px solid var(--border);
       padding: 30px 20px;
@@ -678,7 +767,6 @@
       font-weight: 700;
     }
 
-    /* Responsive */
     @media (max-width: 860px) {
       .hero {
         grid-template-columns: 1fr;
@@ -717,6 +805,12 @@
   <!-- Top Progress Bar -->
   <div class="progress-bar" id="progressBar"></div>
 
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <div class="lightbox-close">&times;</div>
+    <img src="" alt="Enlarged screenshot" class="lightbox-content" id="lightboxImg">
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar">
     <a href="#hero" class="nav-brand">
@@ -752,7 +846,7 @@
           I'm Muhammad Aqil Azami.
         </h1>
         <p class="hero-desc">
-          Based in Malang, Indonesia. Mahasiswa <strong>D-IV Teknik Informatika Polinema</strong> yang suka membangun sistem web full-stack, mengintegrasikan <strong>token LLM API</strong>, otomasi workflow (<strong>n8n</strong>), dan melatih pipeline <strong>Machine Learning</strong> untuk verifikasi berita.
+          Based in Malang, Indonesia. Mahasiswa <strong>D-IV Teknik Informatika Polinema</strong> yang suka membangun sistem web full-stack, mengintegrasikan <strong>token LLM API</strong>, pipeline otomatisasi (<strong>n8n</strong>), dan melatih model <strong>Machine Learning & NLP</strong>.
         </p>
 
         <div class="hero-cta">
@@ -807,7 +901,7 @@
         <span class="neo-badge" style="background: var(--yellow)">Active Research</span>
       </div>
       <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text);">
-        <strong>HoaxCheckML:</strong> Membangun platform verifikasi berita bohong (hoax) berbahasa Indonesia menggunakan Machine Learning & NLP. Dilengkapi automated RSS feed scraper dari <em>Antara News</em>, <em>CNN Indonesia</em>, dan <em>CNBC Indonesia</em> untuk komparasi ground-truth dataset.
+        <strong>HoaxCheckML & Automated Geospatial Pipeline:</strong> Mengembangkan klasifikasi berita bohong (hoax) berbasis NLP dan pipeline otomasi RSS ingestion multi-provinsi (n8n) untuk komparasi ground-truth dataset terverifikasi.
       </p>
     </div>
 
@@ -819,29 +913,87 @@
           Menghubungkan Rekayasa Perangkat Lunak dengan Kecerdasan Buatan.
         </h2>
         <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
-          Sebagai mahasiswa tingkat akhir di <strong>Politeknik Negeri Malang (D-IV Teknik Informatika)</strong>, saya berfokus pada software engineering yang nyata: arsitektur asinkron di backend (Laravel Queues & WebSockets), integrasi token LLM API berbasis OpenRouter, dan eksperimen otomasi alur kerja (n8n).
+          Sebagai mahasiswa di <strong>Politeknik Negeri Malang (D-IV Teknik Informatika)</strong>, saya berfokus pada software engineering yang nyata: arsitektur antrean asinkron di backend (Laravel Queues & WebSockets), integrasi token LLM API berbasis OpenRouter/OpenAI, orkestrasi alur kerja otomasi data (n8n), dan visualisasi kecerdasan geospasial.
         </p>
         <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted);">
-          Bagi saya, AI bukan sekadar alat bantu percakapan, melainkan akselerator sistem yang harus diintegrasikan secara presisi ke dalam aplikasi agar bernilai guna tinggi bagi pengguna akhir.
+          Bagi saya, AI bukan sekadar alat percakapan semata, melainkan akselerator sistem yang harus diintegrasikan secara presisi ke dalam arsitektur aplikasi agar memecahkan problem nyata.
         </p>
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- FEATURED PROJECTS SECTION -->
     <section class="section" id="projects">
       <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-        <div class="section-tag">Featured Projects</div>
-        <div class="doodle-font" style="color: var(--pink)">// shipped & practical tools 🚀</div>
+        <div class="section-tag">Featured Projects & Systems</div>
+        <div class="doodle-font" style="color: var(--pink)">// real systems & visual proof 🔍</div>
       </div>
 
       <div class="projects-grid">
+
+        <!-- PROJECT 1: MAPECO (FEATURED WITH SCREENSHOT) -->
+        <div class="project-card project-card-featured">
+          <div>
+            <div class="project-top">
+              <h3 class="project-title">MAPECO — Geospatial & Economics Intelligence</h3>
+              <span class="neo-badge" style="background: var(--yellow);">Flagship System</span>
+            </div>
+            <p class="project-desc">
+              Platform intelijen geospasial & pemantauan risiko wilayah Indonesia secara realtime. Menggabungkan <strong>Analisis Sentimen Berita NLP</strong> (1.500+ pemberitaan terklasifikasi), radar isu tren provinsi, indikator makro ekonomi nasional (Inflasi, IHSG, Kurs, Komoditas Pangan Cabai Rawit), dan integrasi data Kamtibmas ke dalam dashboard interaktif terpadu.
+            </p>
+            <div class="tech-stack-row">
+              <span class="tech-pill">Geospatial Intelligence</span>
+              <span class="tech-pill">NLP Sentiment Analysis</span>
+              <span class="tech-pill">Data Pipeline</span>
+              <span class="tech-pill">Risk Scoring</span>
+              <span class="tech-pill">Economic Indicators</span>
+            </div>
+            <div class="doodle-font" style="color: var(--pink); font-size: 1.15rem;">
+              Klik gambar untuk melihat resolusi penuh 🔍
+            </div>
+          </div>
+          <div>
+            <div class="project-thumb-box" onclick="openLightbox('mapeco_dashboard.png')">
+              <img src="mapeco_dashboard.png" alt="MAPECO Geospatial & Economics Intelligence Dashboard" class="project-thumb-img project-thumb-img-featured">
+              <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: n8n AUTOMATION WORKFLOW (FEATURED WITH SCREENSHOT) -->
+        <div class="project-card project-card-featured" style="grid-column: 1 / -1; margin-top: 10px;">
+          <div>
+            <div class="project-top">
+              <h3 class="project-title">Automated RSS Ingestion & Queue Pipeline</h3>
+              <span class="neo-badge" style="background: var(--purple); color: #fff;">n8n Orchestration</span>
+            </div>
+            <p class="project-desc">
+              Bukti nyata arsitektur otomatisasi alur kerja multi-tahap menggunakan <strong>n8n</strong>. Mengorkestrasi pengambilan RSS sumber berita provinsi, sistem antrean tugas berulang (<em>job queue worker</em>), parsing payload JSON, penyaringan kondisi (<em>if branching</em>), penyimpanan ke database, hingga penanganan pemulihan otomatis jika terjadi proses macet (<em>manual fix stuck processing</em>).
+            </p>
+            <div class="tech-stack-row">
+              <span class="tech-pill">n8n Orchestration</span>
+              <span class="tech-pill">Job Queue Workers</span>
+              <span class="tech-pill">RSS Scraper</span>
+              <span class="tech-pill">Auto Recovery</span>
+              <span class="tech-pill">Webhooks</span>
+            </div>
+            <div class="doodle-font" style="color: var(--pink); font-size: 1.15rem;">
+              Arsitektur pipeline nyata & teruji di lapangan ⚙️
+            </div>
+          </div>
+          <div>
+            <div class="project-thumb-box" onclick="openLightbox('n8n_workflow.png')">
+              <img src="n8n_workflow.png" alt="n8n Multi-Stage Workflow Orchestration Pipeline" class="project-thumb-img project-thumb-img-featured">
+              <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+            </div>
+          </div>
+        </div>
 
         <!-- Nalarin.ai -->
         <div class="project-card">
           <div>
             <div class="project-top">
               <h3 class="project-title">Nalarin.ai</h3>
-              <span class="neo-badge" style="background: var(--yellow);">AI Platform</span>
+              <span class="neo-badge" style="background: var(--orange); color: #fff;">AI Platform</span>
             </div>
             <p class="project-desc">
               Platform pembelajaran cerdas all-in-one yang mengintegrasikan <strong>Token-based LLM API (OpenRouter/OpenAI)</strong> untuk AI Tutor kontekstual, ringkasan berkas, flashcards, dan kuis adaptif. Dilengkapi background queues (Laravel Queue) dan WebSockets (Laravel Reverb) untuk ruang belajar realtime.
@@ -853,7 +1005,7 @@
               <span class="tech-pill">PHP 8.3</span>
               <span class="tech-pill">OpenRouter API</span>
               <span class="tech-pill">MySQL</span>
-              <span class="tech-pill">Reverb</span>
+              <span class="tech-pill">Reverb WebSockets</span>
               <span class="tech-pill">Tailwind</span>
             </div>
             <a href="https://github.com/M-Aqilaz/Nalarin.ai" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
@@ -878,38 +1030,13 @@
               <span class="tech-pill">Python</span>
               <span class="tech-pill">Flask</span>
               <span class="tech-pill">Scikit-Learn</span>
-              <span class="tech-pill">NLP</span>
+              <span class="tech-pill">NLP Preprocessing</span>
               <span class="tech-pill">Pandas</span>
               <span class="tech-pill">RSS Scraper</span>
             </div>
             <a href="https://github.com/M-Aqilaz/HoaxCheckML" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
               View on GitHub ↗
             </a>
-          </div>
-        </div>
-
-        <!-- n8n Workflow Automation -->
-        <div class="project-card">
-          <div>
-            <div class="project-top">
-              <h3 class="project-title">n8n Automation</h3>
-              <span class="neo-badge" style="background: var(--purple); color: #fff;">Pipeline</span>
-            </div>
-            <p class="project-desc">
-              Perancangan alur kerja otomatis (workflow orchestration) menggunakan n8n untuk integrasi data multi-endpoint. Mengonfigurasi webhook triggers, transformasi data JSON, dan orkestrasi node pemanggilan model AI tanpa intervensi manual.
-            </p>
-          </div>
-          <div>
-            <div class="tech-stack-row">
-              <span class="tech-pill">n8n</span>
-              <span class="tech-pill">Webhooks</span>
-              <span class="tech-pill">REST API</span>
-              <span class="tech-pill">JSON Automation</span>
-              <span class="tech-pill">AI Nodes</span>
-            </div>
-            <div class="neo-badge" style="background: var(--bg); display: block; text-align: center; padding: 8px;">
-              Workflow Orchestration
-            </div>
           </div>
         </div>
 
@@ -1057,7 +1184,7 @@
             <span class="tech-pill">OpenRouter</span>
             <span class="tech-pill">Prompt Engineering</span>
             <span class="tech-pill">Scikit-Learn</span>
-            <span class="tech-pill">NLP</span>
+            <span class="tech-pill">NLP Sentiments</span>
             <span class="tech-pill">Pandas</span>
           </div>
         </div>
@@ -1069,8 +1196,8 @@
           </div>
           <div class="skill-tags">
             <span class="tech-pill">n8n Automation</span>
+            <span class="tech-pill">Job Queues</span>
             <span class="tech-pill">Webhooks</span>
-            <span class="tech-pill">Laravel Queue</span>
             <span class="tech-pill">Git / GitHub</span>
             <span class="tech-pill">Postman</span>
             <span class="tech-pill">Prisma ORM</span>
@@ -1090,7 +1217,7 @@
         </div>
         <h2 class="contact-title">Tertarik Berkolaborasi atau Diskusi Teknis?</h2>
         <p class="contact-text">
-          Saya selalu terbuka untuk peluang magang, proyek rekayasa perangkat lunak, maupun kolaborasi seputar Machine Learning dan AI.
+          Saya selalu terbuka untuk peluang magang, proyek rekayasa perangkat lunak, maupun kolaborasi seputar Machine Learning, Data Pipeline, dan AI.
         </p>
 
         <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 14px;">
@@ -1130,7 +1257,6 @@
     const themeIcon = document.getElementById('themeIcon');
     const root = document.documentElement;
 
-    // Check saved theme
     const savedTheme = localStorage.getItem('aqil_theme') || 'light';
     root.setAttribute('data-theme', savedTheme);
     themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
@@ -1168,6 +1294,25 @@
     }
 
     setTimeout(matrixDecode, 400);
+
+    // Lightbox Modal for Screenshots
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
   </script>
 
 </body>
