@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Aqil Azami | Full-Stack, AI & Automation Developer</title>
-  <meta name="description" content="Portfolio of Muhammad Aqil Azami — Informatics Engineering Student @ Polinema, Full-Stack Web Developer, and AI/ML Enthusiast.">
+  <title>Muhammad Aqil Azami | Full-Stack Web, Mobile & AI Developer</title>
+  <meta name="description" content="Portfolio of Muhammad Aqil Azami — Informatics Engineering Student @ Polinema, Full-Stack Web & Mobile Developer (Flutter, Laravel, Next.js), AI/ML & Automation Enthusiast.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ffd93d'/><text x='50%' y='65%' font-family='sans-serif' font-size='60' font-weight='900' fill='%23000' text-anchor='middle'>A</text></svg>">
@@ -636,6 +636,22 @@
       background: #090d16;
     }
 
+    .slider-stage-mobile {
+      height: 380px;
+      background: #06090e;
+    }
+
+    .slider-stage-mobile .slider-slide img {
+      object-fit: contain;
+      padding: 6px 0;
+    }
+
+    @media (max-width: 860px) {
+      .slider-stage-mobile {
+        height: 320px;
+      }
+    }
+
     .slider-slide {
       position: absolute;
       inset: 0;
@@ -998,7 +1014,7 @@
           I'm Muhammad Aqil Azami.
         </h1>
         <p class="hero-desc">
-          Based in Malang, Indonesia. Mahasiswa <strong>D-IV Teknik Informatika Polinema</strong> yang suka membangun sistem web full-stack, mengintegrasikan <strong>token LLM API</strong>, pipeline otomatisasi (<strong>n8n</strong>), dan melatih model <strong>Machine Learning & NLP</strong>.
+          Based in Malang, Indonesia. Mahasiswa <strong>D-IV Teknik Informatika Polinema</strong> yang berfokus pada rekayasa perangkat lunak modern: sistem web full-stack (<strong>Laravel</strong>, <strong>Next.js</strong>), mobile app offline-first (<strong>Flutter / Dart</strong>), orkestrasi pipeline otomatisasi (<strong>n8n</strong>), serta rekayasa <strong>AI / Machine Learning & NLP</strong>.
         </p>
 
         <div class="hero-cta">
@@ -1025,7 +1041,7 @@
 
       <!-- Avatar Polaroid -->
       <div class="avatar-wrapper">
-        <div class="sticker sticker-1">💾 Full-Stack & AI</div>
+        <div class="sticker sticker-1">📱 Flutter & Full-Stack</div>
         <div class="sticker sticker-2">>_ Polinema '24</div>
 
         <div class="polaroid-card">
@@ -1048,7 +1064,7 @@
         <span class="neo-badge" style="background: var(--yellow)">Active Research</span>
       </div>
       <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text);">
-        <strong>HoaxCheckML & Automated Geospatial Pipeline:</strong> Mengembangkan klasifikasi berita bohong (hoax) berbasis NLP dan pipeline otomasi RSS ingestion multi-provinsi (n8n) untuk komparasi ground-truth dataset terverifikasi.
+        <strong>Aegis Finance & Mobile Engineering:</strong> Mengembangkan aplikasi personal finance offline-first berbasis Flutter dengan 29 unit test deterministik, visual cincin konsentris aktivitas finansial (Apple Watch style), dan brankas privasi (Aegis Security Vault). Serta riset lanjutan integrasi NLP berita dan otomatisasi pipeline data geospasial.
       </p>
     </div>
 
@@ -1057,13 +1073,13 @@
       <div class="section-tag">About Me</div>
       <div class="neo-box" style="padding: 30px;">
         <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 16px;">
-          Menghubungkan Rekayasa Perangkat Lunak dengan Kecerdasan Buatan.
+          Menghubungkan Rekayasa Perangkat Lunak, Ekosistem Mobile, dan Kecerdasan Buatan.
         </h2>
         <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
-          Sebagai mahasiswa di <strong>Politeknik Negeri Malang (D-IV Teknik Informatika)</strong>, saya berfokus pada software engineering yang nyata: arsitektur antrean asinkron di backend (Laravel Queues & WebSockets), integrasi token LLM API berbasis OpenRouter/OpenAI, orkestrasi alur kerja otomasi data (n8n), dan visualisasi kecerdasan geospasial.
+          Sebagai mahasiswa di <strong>Politeknik Negeri Malang (D-IV Teknik Informatika)</strong>, saya berfokus pada software engineering yang nyata: arsitektur antrean asinkron di backend (Laravel Queues & WebSockets), ekosistem mobile offline-first dengan invariant matematis dan clean architecture (Flutter & Dart), integrasi token LLM API berbasis OpenRouter/OpenAI, orkestrasi alur kerja otomasi data (n8n), dan visualisasi kecerdasan geospasial.
         </p>
         <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted);">
-          Bagi saya, AI bukan sekadar alat percakapan semata, melainkan akselerator sistem yang harus diintegrasikan secara presisi ke dalam arsitektur aplikasi agar memecahkan problem nyata.
+          Bagi saya, AI dan teknologi modern bukan sekadar alat eksperimen, melainkan komponen inti yang harus dirancang secara kokoh, teruji dengan automated unit test, dan terintegrasi presisi ke dalam arsitektur aplikasi agar memecahkan problem nyata.
         </p>
       </div>
     </section>
@@ -1077,7 +1093,89 @@
 
       <div class="projects-grid">
 
-        <!-- PROJECT 1: MAPECO (UNIFIED WITH n8n AUTOMATION PIPELINE) -->
+                <!-- PROJECT 1: AEGIS FINANCE (FEATURED FLUTTER MOBILE APP) -->
+        <div class="project-card project-card-featured">
+          <div>
+            <div class="project-top" style="display: flex; align-items: center; gap: 12px;">
+              <img src="aegis_mascot_logo.jpg" alt="Aegis Mascot" style="width: 46px; height: 46px; border-radius: 10px; border: 2.5px solid var(--border); box-shadow: 2px 2px 0 var(--border); object-fit: cover; flex-shrink: 0;">
+              <div>
+                <h3 class="project-title" style="margin: 0; line-height: 1.25;">Aegis Finance</h3>
+                <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--text-muted); font-weight: 700; margin-top: 2px;">Smart Wealth Guardian & Offline-First Mobile</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <span class="neo-badge" style="background: var(--green); color: #000;">📱 Flutter & Dart 3.x</span>
+              <span class="neo-badge" style="background: var(--cyan); color: #000;">🔒 100% Offline-First</span>
+              <span class="neo-badge" style="background: var(--yellow); color: #000;">🧪 29/29 Tests Passed</span>
+            </div>
+            <p class="project-desc">
+              Aplikasi pembukuan keuangan modern dengan estetika <em>Obsidian Cosmic</em>, visual <strong>trio cincin aktivitas finansial konsentris</strong> ala <em>Apple Watch</em> (streak konsistensi harian, kendali expense vs budget, progres target tabungan), dan brankas privasi <strong>Aegis Security Vault</strong> (PIN 4-digit taktil, haptic feedback, & biometrik sidik jari). Dilengkapi manajemen kartu <em>multi-pocket</em> (kekayaan riil <em>Net Worth</em>, kas harian, tabungan vault, rekening bank), pencatatan kilat 3 detik via numpad taktil, sensor penyamaran privasi saldo (<em>1-Tap Privacy Sensor</em>), serta ekspor-impor cadangan lokal tanpa dependensi cloud. Dibangun dengan invariant matematis ketat dan diuji penuh dengan <strong>29 unit test deterministik</strong>.
+            </p>
+            <div class="tech-stack-row">
+              <span class="tech-pill">Flutter 3.x</span>
+              <span class="tech-pill">Dart 3.x</span>
+              <span class="tech-pill">Offline-First SQLite</span>
+              <span class="tech-pill">Deterministic Unit Tests (29/29)</span>
+              <span class="tech-pill">Concentric Rings UI</span>
+              <span class="tech-pill">Biometric / PIN Vault</span>
+              <span class="tech-pill">Multi-Pocket Management</span>
+              <span class="tech-pill">Release APK</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+              <a href="https://github.com/M-Aqilaz/Aegis-Finance-Track/releases/latest/download/AegisFinance-Universal.apk" target="_blank" rel="noreferrer" class="neo-btn" style="background: var(--green); color: #000; font-size: 0.85rem;">
+                📥 Unduh APK Siap Pakai (v1.0.0)
+              </a>
+              <a href="https://github.com/M-Aqilaz/Aegis-Finance-Track" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="font-size: 0.85rem;">
+                View on GitHub ↗
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <!-- Neobrutalist Dual-View Slider for Aegis -->
+            <div class="slider-tabs">
+              <button class="slider-tab-btn active" id="tabAegis0" onclick="setAegisSlide(0)">
+                📱 1. Net Worth & Rings
+              </button>
+              <button class="slider-tab-btn" id="tabAegis1" onclick="setAegisSlide(1)">
+                💳 2. History & Filter
+              </button>
+            </div>
+
+            <div class="slider-container">
+              <div class="slider-stage slider-stage-mobile" id="aegisStage" onclick="openActiveAegisLightbox()">
+                <!-- Slide 0: Net Worth & Rings -->
+                <div class="slider-slide active" id="aegisSlide0">
+                  <img src="aegis_finance_preview.png" alt="Aegis Finance Net Worth & Concentric Rings Dashboard">
+                </div>
+                <!-- Slide 1: History -->
+                <div class="slider-slide" id="aegisSlide1">
+                  <img src="aegis_history_preview.png" alt="Aegis Finance History and Pocket Management">
+                </div>
+
+                <div class="zoom-pill">🔍 Klik untuk Full Resolution</div>
+
+                <!-- Nav Arrows -->
+                <button class="slider-nav-btn slider-nav-prev" onclick="event.stopPropagation(); prevAegisSlide();" title="Previous Slide" aria-label="Previous Slide">‹</button>
+                <button class="slider-nav-btn slider-nav-next" onclick="event.stopPropagation(); nextAegisSlide();" title="Next Slide" aria-label="Next Slide">›</button>
+              </div>
+
+              <!-- Meta Footer Bar -->
+              <div class="slider-meta-bar">
+                <div id="aegisCaption">📱 Aegis Finance: Net Worth & Cincin Aktivitas Finansial</div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <span id="aegisCounter" style="color: var(--text-muted); font-size: 0.75rem;">1 / 2</span>
+                  <div class="slider-dots">
+                    <span class="slider-dot active" id="dotAegis0" onclick="setAegisSlide(0)"></span>
+                    <span class="slider-dot" id="dotAegis1" onclick="setAegisSlide(1)"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: MAPECO (UNIFIED WITH n8n AUTOMATION PIPELINE) -->
         <div class="project-card project-card-featured">
           <div>
             <div class="project-top">
@@ -1237,6 +1335,38 @@
           </div>
         </div>
 
+        <!-- PROJECT 5: 244107020128-mobile-course -->
+        <div class="project-card">
+          <div class="project-thumb-box" onclick="openLightbox('mobile_course_preview.png')">
+            <img src="mobile_course_preview.png" alt="Mobile Development Coursework & Architecture" class="project-thumb-img" style="object-position: top center;">
+            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+          </div>
+          <div>
+            <div class="project-top">
+              <h3 class="project-title">Mobile Engineering Coursework</h3>
+              <span class="neo-badge" style="background: var(--yellow); color: #000;">Flutter & Dart</span>
+            </div>
+            <p class="project-desc">
+              Dokumentasi 16-minggu rekayasa aplikasi mobile di Polinema: penerapan Riverpod state management, integrasi REST API Dio, arsitektur offline-first SQLite, feature-first Clean Architecture, integrasi AI Chat Assistant dengan streaming tokens, serta profiling performa CPU/Memory via Flutter DevTools.
+            </p>
+          </div>
+          <div>
+            <div class="tech-stack-row">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Dart</span>
+              <span class="tech-pill">Riverpod</span>
+              <span class="tech-pill">Clean Architecture</span>
+              <span class="tech-pill">SQLite</span>
+              <span class="tech-pill">AI Assistant</span>
+              <span class="tech-pill">DevTools</span>
+            </div>
+            <a href="https://github.com/M-Aqilaz/244107020128-mobile-course" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
+              View on GitHub ↗
+            </a>
+          </div>
+        </div>
+
+
       </div>
     </section>
 
@@ -1301,7 +1431,7 @@
             </div>
             <div class="timeline-company">D-IV Teknik Informatika (Teknologi Informasi)</div>
             <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
-              Fokus keilmuan: Pemrograman Web Lanjut, Struktur Data & Algoritma, Machine Learning, Pengolahan Citra Digital & Visi Komputer, Rekayasa Perangkat Lunak.
+              Fokus keilmuan: Pemrograman Web Lanjut, Rekayasa Aplikasi Mobile, Struktur Data & Algoritma, Machine Learning, Pengolahan Citra Digital & Visi Komputer, Rekayasa Perangkat Lunak.
             </p>
           </div>
         </div>
@@ -1321,6 +1451,7 @@
             <span>Languages</span>
           </div>
           <div class="skill-tags">
+            <span class="tech-pill">Dart</span>
             <span class="tech-pill">Python</span>
             <span class="tech-pill">PHP 8.3</span>
             <span class="tech-pill">TypeScript</span>
@@ -1334,12 +1465,14 @@
         <div class="skill-card">
           <div class="skill-card-title">
             <span style="background: var(--cyan); padding: 4px; border-radius: 4px; border: 1.5px solid var(--border);">🌐</span>
-            <span>Web Frameworks</span>
+            <span>Web & Mobile</span>
           </div>
           <div class="skill-tags">
+            <span class="tech-pill">Flutter 3.x</span>
             <span class="tech-pill">Laravel 13</span>
             <span class="tech-pill">Next.js 16</span>
             <span class="tech-pill">React 19</span>
+            <span class="tech-pill">Riverpod</span>
             <span class="tech-pill">Tailwind CSS</span>
             <span class="tech-pill">Flask</span>
             <span class="tech-pill">Laravel Reverb</span>
@@ -1358,23 +1491,24 @@
             <span class="tech-pill">Scikit-Learn</span>
             <span class="tech-pill">NLP Sentiments</span>
             <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">Jupyter</span>
           </div>
         </div>
 
         <div class="skill-card">
           <div class="skill-card-title">
             <span style="background: var(--green); padding: 4px; border-radius: 4px; border: 1.5px solid var(--border);">⚙️</span>
-            <span>Tools & Backend</span>
+            <span>Architecture & Tools</span>
           </div>
           <div class="skill-tags">
+            <span class="tech-pill">Clean Architecture</span>
+            <span class="tech-pill">Unit Testing (TDD)</span>
             <span class="tech-pill">n8n Automation</span>
-            <span class="tech-pill">Job Queues</span>
-            <span class="tech-pill">Webhooks</span>
-            <span class="tech-pill">Git / GitHub</span>
-            <span class="tech-pill">Postman</span>
+            <span class="tech-pill">SQLite / MySQL</span>
             <span class="tech-pill">Prisma ORM</span>
-            <span class="tech-pill">MySQL</span>
-            <span class="tech-pill">Docker (Basic)</span>
+            <span class="tech-pill">Git / GitHub</span>
+            <span class="tech-pill">Flutter DevTools</span>
+            <span class="tech-pill">Postman</span>
           </div>
         </div>
 
@@ -1466,6 +1600,57 @@
     }
 
     setTimeout(matrixDecode, 400);
+
+        // Aegis Finance Interactive Dual-View Slider
+    let currentAegisSlide = 0;
+    const aegisSlides = [
+      {
+        src: 'aegis_finance_preview.png',
+        caption: '📱 Aegis Finance: Net Worth & Cincin Aktivitas Finansial'
+      },
+      {
+        src: 'aegis_history_preview.png',
+        caption: '💳 Aegis Finance: Riwayat Transaksi & Filter Kantong'
+      }
+    ];
+
+    function setAegisSlide(index) {
+      currentAegisSlide = index;
+      for (let i = 0; i < aegisSlides.length; i++) {
+        const slide = document.getElementById(`aegisSlide${i}`);
+        const tab = document.getElementById(`tabAegis${i}`);
+        const dot = document.getElementById(`dotAegis${i}`);
+        if (slide && tab && dot) {
+          if (i === index) {
+            slide.classList.add('active');
+            tab.classList.add('active');
+            dot.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+            tab.classList.remove('active');
+            dot.classList.remove('active');
+          }
+        }
+      }
+      const capEl = document.getElementById('aegisCaption');
+      const countEl = document.getElementById('aegisCounter');
+      if (capEl) capEl.textContent = aegisSlides[index].caption;
+      if (countEl) countEl.textContent = `${index + 1} / ${aegisSlides.length}`;
+    }
+
+    function nextAegisSlide() {
+      const nextIndex = (currentAegisSlide + 1) % aegisSlides.length;
+      setAegisSlide(nextIndex);
+    }
+
+    function prevAegisSlide() {
+      const prevIndex = (currentAegisSlide - 1 + aegisSlides.length) % aegisSlides.length;
+      setAegisSlide(prevIndex);
+    }
+
+    function openActiveAegisLightbox() {
+      openLightbox(aegisSlides[currentAegisSlide].src);
+    }
 
     // MAPECO Interactive Dual-View Slider
     let currentMapecoSlide = 0;
