@@ -1084,156 +1084,64 @@
 
       <div class="projects-grid">
 
-                <!-- PROJECT 1: AEGIS FINANCE (FEATURED FLUTTER MOBILE APP) -->
-        <div class="project-card project-card-featured">
+        <!-- PROJECT 1: Aegis Finance -->
+        <div class="project-card">
+          <div class="project-thumb-box" onclick="openLightbox('aegis_finance_preview.png')">
+            <img src="aegis_finance_preview.png" alt="Aegis Finance Personal Wealth Guardian" class="project-thumb-img" style="object-position: top center;">
+            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+          </div>
           <div>
-            <div class="project-top" style="display: flex; align-items: center; gap: 12px;">
-              <img src="aegis_mascot_logo.jpg" alt="Aegis Mascot" style="width: 46px; height: 46px; border-radius: 10px; border: 2.5px solid var(--border); box-shadow: 2px 2px 0 var(--border); object-fit: cover; flex-shrink: 0;">
-              <div>
-                <h3 class="project-title" style="margin: 0; line-height: 1.25;">Aegis Finance</h3>
-                <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--text-muted); font-weight: 700; margin-top: 2px;">Smart Wealth Guardian & Offline-First Mobile</div>
-              </div>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
-              <span class="neo-badge" style="background: var(--green); color: #000;">📱 Flutter & Dart</span>
-              <span class="neo-badge" style="background: var(--cyan); color: #000;">🔒 Offline-First</span>
-              <span class="neo-badge" style="background: var(--yellow); color: #000;">🧪 29 Unit Tests</span>
+            <div class="project-top">
+              <h3 class="project-title">Aegis Finance</h3>
+              <span class="neo-badge" style="background: var(--green); color: #000;">Flutter</span>
             </div>
             <p class="project-desc">
-              Aplikasi pencatat keuangan pribadi 100% offline-first. Dilengkapi visual cincin target harian, pencatatan transaksi cepat via numpad, pemisahan kantong dana (kas, tabungan, rekening bank), pengunci PIN & biometrik, serta pencadangan lokal.
+              Aplikasi pencatat keuangan pribadi 100% offline-first. Dilengkapi visual cincin target harian, pencatatan transaksi cepat via numpad, pemisahan kantong dana, dan pengunci PIN/biometrik.
             </p>
+          </div>
+          <div>
             <div class="tech-stack-row">
               <span class="tech-pill">Flutter</span>
               <span class="tech-pill">Dart</span>
               <span class="tech-pill">SQLite</span>
               <span class="tech-pill">Unit Tests (29 Passed)</span>
               <span class="tech-pill">PIN & Biometric</span>
-              <span class="tech-pill">Release APK</span>
             </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-              <a href="https://github.com/M-Aqilaz/Aegis-Finance-Track/releases/latest/download/AegisFinance-Universal.apk" target="_blank" rel="noreferrer" class="neo-btn" style="background: var(--green); color: #000; font-size: 0.85rem;">
-                📥 Unduh APK Siap Pakai
-              </a>
-              <a href="https://github.com/M-Aqilaz/Aegis-Finance-Track" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="font-size: 0.85rem;">
-                View on GitHub ↗
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <!-- Neobrutalist Dual-View Slider for Aegis -->
-            <div class="slider-tabs">
-              <button class="slider-tab-btn active" id="tabAegis0" onclick="setAegisSlide(0)">
-                📱 1. Net Worth & Rings
-              </button>
-              <button class="slider-tab-btn" id="tabAegis1" onclick="setAegisSlide(1)">
-                💳 2. History & Filter
-              </button>
-            </div>
-
-            <div class="slider-container">
-              <div class="slider-stage slider-stage-mobile" id="aegisStage" onclick="openActiveAegisLightbox()">
-                <!-- Slide 0: Net Worth & Rings -->
-                <div class="slider-slide active" id="aegisSlide0">
-                  <img src="aegis_finance_preview.png" alt="Aegis Finance Net Worth & Concentric Rings Dashboard">
-                </div>
-                <!-- Slide 1: History -->
-                <div class="slider-slide" id="aegisSlide1">
-                  <img src="aegis_history_preview.png" alt="Aegis Finance History and Pocket Management">
-                </div>
-
-                <div class="zoom-pill">🔍 Klik untuk Full Resolution</div>
-
-                <!-- Nav Arrows -->
-                <button class="slider-nav-btn slider-nav-prev" onclick="event.stopPropagation(); prevAegisSlide();" title="Previous Slide" aria-label="Previous Slide">‹</button>
-                <button class="slider-nav-btn slider-nav-next" onclick="event.stopPropagation(); nextAegisSlide();" title="Next Slide" aria-label="Next Slide">›</button>
-              </div>
-
-              <!-- Meta Footer Bar -->
-              <div class="slider-meta-bar">
-                <div id="aegisCaption">📱 Aegis Finance: Net Worth & Cincin Aktivitas Finansial</div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <span id="aegisCounter" style="color: var(--text-muted); font-size: 0.75rem;">1 / 2</span>
-                  <div class="slider-dots">
-                    <span class="slider-dot active" id="dotAegis0" onclick="setAegisSlide(0)"></span>
-                    <span class="slider-dot" id="dotAegis1" onclick="setAegisSlide(1)"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="https://github.com/M-Aqilaz/Aegis-Finance-Track" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
+              View on GitHub ↗
+            </a>
           </div>
         </div>
 
-        <!-- PROJECT 2: MAPECO (UNIFIED WITH n8n AUTOMATION PIPELINE) -->
-        <div class="project-card project-card-featured">
+        <!-- PROJECT 2: MAPECO -->
+        <div class="project-card">
+          <div class="project-thumb-box" onclick="openLightbox('mapeco_dashboard.png')">
+            <img src="mapeco_dashboard.png" alt="MAPECO Geospatial Dashboard" class="project-thumb-img">
+            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+          </div>
           <div>
             <div class="project-top">
-              <h3 class="project-title">MAPECO — Geospatial Intelligence & Automated n8n Pipeline</h3>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
-              <span class="neo-badge" style="background: var(--yellow);">📊 Dashboard Peta</span>
-              <span class="neo-badge" style="background: var(--purple); color: #fff;">⚙️ n8n Automation</span>
+              <h3 class="project-title">MAPECO</h3>
+              <span class="neo-badge" style="background: var(--yellow); color: #000;">Geospatial</span>
             </div>
             <p class="project-desc">
-              Dashboard interaktif untuk memantau isu wilayah dan sentimen daerah di Indonesia. Menggunakan pipeline n8n untuk otomatisasi scraping RSS berita berkala, analisis sentimen NLP, dan visualisasi pemetaan risiko wilayah.
+              Dashboard interaktif untuk memantau isu wilayah dan sentimen daerah di Indonesia berbasis pipeline otomatisasi n8n dan pemetaan risiko wilayah.
             </p>
+          </div>
+          <div>
             <div class="tech-stack-row">
               <span class="tech-pill">n8n Automation</span>
               <span class="tech-pill">Geospatial Map</span>
               <span class="tech-pill">NLP Sentiment</span>
               <span class="tech-pill">RSS Scraper</span>
-              <span class="tech-pill">REST API</span>
             </div>
-            <div class="doodle-font" style="color: var(--pink); font-size: 1.05rem;">
-              Geser slide di samping untuk melihat UI Dashboard & Pipeline ⤹
-            </div>
-          </div>
-
-          <div>
-            <!-- Neobrutalist Dual-View Slider -->
-            <div class="slider-tabs">
-              <button class="slider-tab-btn active" id="tabMapeco0" onclick="setMapecoSlide(0)">
-                📊 1. Frontend Dashboard
-              </button>
-              <button class="slider-tab-btn" id="tabMapeco1" onclick="setMapecoSlide(1)">
-                ⚙️ 2. n8n Automation Workflow
-              </button>
-            </div>
-
-            <div class="slider-container">
-              <div class="slider-stage" id="mapecoStage" onclick="openActiveMapecoLightbox()">
-                <!-- Slide 0: Dashboard -->
-                <div class="slider-slide active" id="mapecoSlide0">
-                  <img src="mapeco_dashboard.png" alt="MAPECO Geospatial & Economics Intelligence Dashboard">
-                </div>
-                <!-- Slide 1: n8n Workflow -->
-                <div class="slider-slide" id="mapecoSlide1">
-                  <img src="n8n_workflow.png" alt="n8n Automated Data Grab & Queue Ingestion Workflow">
-                </div>
-
-                <div class="zoom-pill">🔍 Klik untuk Full Resolution</div>
-
-                <!-- Nav Arrows -->
-                <button class="slider-nav-btn slider-nav-prev" onclick="event.stopPropagation(); prevMapecoSlide();" title="Previous Slide" aria-label="Previous Slide">‹</button>
-                <button class="slider-nav-btn slider-nav-next" onclick="event.stopPropagation(); nextMapecoSlide();" title="Next Slide" aria-label="Next Slide">›</button>
-              </div>
-
-              <!-- Meta Footer Bar -->
-              <div class="slider-meta-bar">
-                <div id="mapecoCaption">📊 MAPECO: Peta Risiko Wilayah & NLP Dashboard</div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <span id="mapecoCounter" style="color: var(--text-muted); font-size: 0.75rem;">1 / 2</span>
-                  <div class="slider-dots">
-                    <span class="slider-dot active" id="dotMapeco0" onclick="setMapecoSlide(0)"></span>
-                    <span class="slider-dot" id="dotMapeco1" onclick="setMapecoSlide(1)"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="javascript:void(0)" onclick="openLightbox('mapeco_dashboard.png')" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
+              View Showcase 🔍
+            </a>
           </div>
         </div>
 
-        <!-- PROJECT 2: Nalarin.ai -->
+        <!-- PROJECT 3: Nalarin.ai -->
         <div class="project-card">
           <div class="project-thumb-box" onclick="openLightbox('nalarin_dashboard.png')">
             <img src="nalarin_dashboard.png" alt="Nalarin.ai Learning Platform Dashboard" class="project-thumb-img">
@@ -1245,7 +1153,7 @@
               <span class="neo-badge" style="background: var(--orange); color: #fff;">AI Platform</span>
             </div>
             <p class="project-desc">
-              Platform belajar dengan integrasi AI (OpenRouter API) untuk tanya-jawab tutor, ringkasan berkas materi, kuis, dan flashcard. Menggunakan Laravel 13 dan WebSockets untuk ruang belajar realtime.
+              Platform belajar dengan integrasi AI (OpenRouter API) untuk tanya-jawab tutor, ringkasan berkas materi, kuis, dan flashcard realtime.
             </p>
           </div>
           <div>
@@ -1253,8 +1161,7 @@
               <span class="tech-pill">Laravel 13</span>
               <span class="tech-pill">PHP 8.3</span>
               <span class="tech-pill">OpenRouter API</span>
-              <span class="tech-pill">MySQL</span>
-              <span class="tech-pill">Reverb WebSockets</span>
+              <span class="tech-pill">WebSockets</span>
               <span class="tech-pill">Tailwind</span>
             </div>
             <a href="https://github.com/M-Aqilaz/Nalarin.ai" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
@@ -1263,7 +1170,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 3: HoaxCheckML -->
+        <!-- PROJECT 4: HoaxCheckML -->
         <div class="project-card">
           <div class="project-thumb-box" onclick="openLightbox('hoaxcheck_preview.png')">
             <img src="hoaxcheck_preview.png" alt="HoaxCheck Studio Dataset Management & Scraper" class="project-thumb-img">
@@ -1272,10 +1179,10 @@
           <div>
             <div class="project-top">
               <h3 class="project-title">HoaxCheckML</h3>
-              <span class="neo-badge" style="background: var(--green);">ML & NLP</span>
+              <span class="neo-badge" style="background: var(--green); color: #000;">ML & NLP</span>
             </div>
             <p class="project-desc">
-              Aplikasi klasifikasi dan verifikasi berita hoax berbahasa Indonesia berbasis NLP. Dilengkapi scraper RSS berita untuk pengumpulan dataset dan antarmuka web Flask.
+              Aplikasi klasifikasi dan verifikasi berita hoax berbahasa Indonesia berbasis NLP. Dilengkapi scraper RSS berita terpercaya dan antarmuka web Flask.
             </p>
           </div>
           <div>
@@ -1283,8 +1190,7 @@
               <span class="tech-pill">Python</span>
               <span class="tech-pill">Flask</span>
               <span class="tech-pill">Scikit-Learn</span>
-              <span class="tech-pill">NLP Preprocessing</span>
-              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">NLP</span>
               <span class="tech-pill">RSS Scraper</span>
             </div>
             <a href="https://github.com/M-Aqilaz/HoaxCheckML" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
@@ -1293,7 +1199,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 4: InterSelf -->
+        <!-- PROJECT 5: InterSelf -->
         <div class="project-card">
           <div class="project-thumb-box" onclick="openLightbox('interself_preview.png')">
             <img src="interself_preview.png" alt="InterSelf Gamified RPG Productivity Dashboard" class="project-thumb-img">
@@ -1302,7 +1208,7 @@
           <div>
             <div class="project-top">
               <h3 class="project-title">InterSelf</h3>
-              <span class="neo-badge" style="background: var(--cyan);">Gamification</span>
+              <span class="neo-badge" style="background: var(--cyan); color: #000;">Gamification</span>
             </div>
             <p class="project-desc">
               Aplikasi produktivitas bertema gamifikasi RPG yang mengubah tugas harian menjadi quest, pertarungan boss mingguan, streak konsistensi, dan in-app economy.
@@ -1321,9 +1227,6 @@
             </a>
           </div>
         </div>
-
-
-
 
       </div>
     </section>
@@ -1558,108 +1461,6 @@
     }
 
     setTimeout(matrixDecode, 400);
-
-        // Aegis Finance Interactive Dual-View Slider
-    let currentAegisSlide = 0;
-    const aegisSlides = [
-      {
-        src: 'aegis_finance_preview.png',
-        caption: '📱 Aegis Finance: Net Worth & Cincin Aktivitas Finansial'
-      },
-      {
-        src: 'aegis_history_preview.png',
-        caption: '💳 Aegis Finance: Riwayat Transaksi & Filter Kantong'
-      }
-    ];
-
-    function setAegisSlide(index) {
-      currentAegisSlide = index;
-      for (let i = 0; i < aegisSlides.length; i++) {
-        const slide = document.getElementById(`aegisSlide${i}`);
-        const tab = document.getElementById(`tabAegis${i}`);
-        const dot = document.getElementById(`dotAegis${i}`);
-        if (slide && tab && dot) {
-          if (i === index) {
-            slide.classList.add('active');
-            tab.classList.add('active');
-            dot.classList.add('active');
-          } else {
-            slide.classList.remove('active');
-            tab.classList.remove('active');
-            dot.classList.remove('active');
-          }
-        }
-      }
-      const capEl = document.getElementById('aegisCaption');
-      const countEl = document.getElementById('aegisCounter');
-      if (capEl) capEl.textContent = aegisSlides[index].caption;
-      if (countEl) countEl.textContent = `${index + 1} / ${aegisSlides.length}`;
-    }
-
-    function nextAegisSlide() {
-      const nextIndex = (currentAegisSlide + 1) % aegisSlides.length;
-      setAegisSlide(nextIndex);
-    }
-
-    function prevAegisSlide() {
-      const prevIndex = (currentAegisSlide - 1 + aegisSlides.length) % aegisSlides.length;
-      setAegisSlide(prevIndex);
-    }
-
-    function openActiveAegisLightbox() {
-      openLightbox(aegisSlides[currentAegisSlide].src);
-    }
-
-    // MAPECO Interactive Dual-View Slider
-    let currentMapecoSlide = 0;
-    const mapecoSlides = [
-      {
-        src: 'mapeco_dashboard.png',
-        caption: '📊 MAPECO: Peta Risiko Wilayah & NLP Dashboard'
-      },
-      {
-        src: 'n8n_workflow.png',
-        caption: '⚙️ n8n: Multi-Stage Workflow Orchestration Pipeline'
-      }
-    ];
-
-    function setMapecoSlide(index) {
-      currentMapecoSlide = index;
-      for (let i = 0; i < mapecoSlides.length; i++) {
-        const slide = document.getElementById(`mapecoSlide${i}`);
-        const tab = document.getElementById(`tabMapeco${i}`);
-        const dot = document.getElementById(`dotMapeco${i}`);
-        if (slide && tab && dot) {
-          if (i === index) {
-            slide.classList.add('active');
-            tab.classList.add('active');
-            dot.classList.add('active');
-          } else {
-            slide.classList.remove('active');
-            tab.classList.remove('active');
-            dot.classList.remove('active');
-          }
-        }
-      }
-      const capEl = document.getElementById('mapecoCaption');
-      const countEl = document.getElementById('mapecoCounter');
-      if (capEl) capEl.textContent = mapecoSlides[index].caption;
-      if (countEl) countEl.textContent = `${index + 1} / ${mapecoSlides.length}`;
-    }
-
-    function nextMapecoSlide() {
-      const nextIndex = (currentMapecoSlide + 1) % mapecoSlides.length;
-      setMapecoSlide(nextIndex);
-    }
-
-    function prevMapecoSlide() {
-      const prevIndex = (currentMapecoSlide - 1 + mapecoSlides.length) % mapecoSlides.length;
-      setMapecoSlide(prevIndex);
-    }
-
-    function openActiveMapecoLightbox() {
-      openLightbox(mapecoSlides[currentMapecoSlide].src);
-    }
 
     // Lightbox Modal for Screenshots
     const lightboxModal = document.getElementById('lightboxModal');
