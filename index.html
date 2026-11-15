@@ -987,7 +987,6 @@
     </a>
 
     <ul class="nav-menu">
-      <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#journey" class="nav-link">Journey</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -1057,32 +1056,24 @@
 
     <!-- SPOTLIGHT: CURRENTLY BUILDING -->
     <div class="spotlight-card">
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
         <div style="font-family: 'Space Mono', monospace; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">
           <span class="pulse-dot"></span> Sedang Dikerjakan (Currently Building)
         </div>
-        <span class="neo-badge" style="background: var(--yellow)">Active Research</span>
+        <span class="neo-badge" style="background: var(--yellow)">In Progress</span>
       </div>
-      <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text);">
-        <strong>Aegis Finance & Mobile Engineering:</strong> Mengembangkan aplikasi personal finance offline-first berbasis Flutter dengan 29 unit test deterministik, visual cincin konsentris aktivitas finansial (Apple Watch style), dan brankas privasi (Aegis Security Vault). Serta riset lanjutan integrasi NLP berita dan otomatisasi pipeline data geospasial.
-      </p>
+      <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.93rem; line-height: 1.55; color: var(--text);">
+        <div>
+          <strong>🛡️ Aegis Finance:</strong> Aplikasi keuangan offline-first (Flutter & SQLite) dengan visualisasi target harian dan proteksi PIN/biometrik.
+        </div>
+        <div>
+          <strong>🔍 HoaxCheckML:</strong> Riset model klasifikasi berita hoax (NLP) dan pengumpulan dataset berita ground-truth via RSS scraper.
+        </div>
+        <div>
+          <strong>⚙️ Workflow & Data Pipeline:</strong> Eksplorasi otomasi data n8n dan integrasi model machine learning pada sistem web.
+        </div>
+      </div>
     </div>
-
-    <!-- ABOUT SECTION -->
-    <section class="section" id="about">
-      <div class="section-tag">About Me</div>
-      <div class="neo-box" style="padding: 30px;">
-        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 16px;">
-          Menghubungkan Rekayasa Perangkat Lunak, Ekosistem Mobile, dan Kecerdasan Buatan.
-        </h2>
-        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
-          Sebagai mahasiswa di <strong>Politeknik Negeri Malang (D-IV Teknik Informatika)</strong>, saya berfokus pada software engineering yang nyata: arsitektur antrean asinkron di backend (Laravel Queues & WebSockets), ekosistem mobile offline-first dengan invariant matematis dan clean architecture (Flutter & Dart), integrasi token LLM API berbasis OpenRouter/OpenAI, orkestrasi alur kerja otomasi data (n8n), dan visualisasi kecerdasan geospasial.
-        </p>
-        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted);">
-          Bagi saya, AI dan teknologi modern bukan sekadar alat eksperimen, melainkan komponen inti yang harus dirancang secara kokoh, teruji dengan automated unit test, dan terintegrasi presisi ke dalam arsitektur aplikasi agar memecahkan problem nyata.
-        </p>
-      </div>
-    </section>
 
     <!-- FEATURED PROJECTS SECTION -->
     <section class="section" id="projects">
@@ -1104,26 +1095,24 @@
               </div>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
-              <span class="neo-badge" style="background: var(--green); color: #000;">📱 Flutter & Dart 3.x</span>
-              <span class="neo-badge" style="background: var(--cyan); color: #000;">🔒 100% Offline-First</span>
-              <span class="neo-badge" style="background: var(--yellow); color: #000;">🧪 29/29 Tests Passed</span>
+              <span class="neo-badge" style="background: var(--green); color: #000;">📱 Flutter & Dart</span>
+              <span class="neo-badge" style="background: var(--cyan); color: #000;">🔒 Offline-First</span>
+              <span class="neo-badge" style="background: var(--yellow); color: #000;">🧪 29 Unit Tests</span>
             </div>
             <p class="project-desc">
-              Aplikasi pembukuan keuangan modern dengan estetika <em>Obsidian Cosmic</em>, visual <strong>trio cincin aktivitas finansial konsentris</strong> ala <em>Apple Watch</em> (streak konsistensi harian, kendali expense vs budget, progres target tabungan), dan brankas privasi <strong>Aegis Security Vault</strong> (PIN 4-digit taktil, haptic feedback, & biometrik sidik jari). Dilengkapi manajemen kartu <em>multi-pocket</em> (kekayaan riil <em>Net Worth</em>, kas harian, tabungan vault, rekening bank), pencatatan kilat 3 detik via numpad taktil, sensor penyamaran privasi saldo (<em>1-Tap Privacy Sensor</em>), serta ekspor-impor cadangan lokal tanpa dependensi cloud. Dibangun dengan invariant matematis ketat dan diuji penuh dengan <strong>29 unit test deterministik</strong>.
+              Aplikasi pencatat keuangan pribadi 100% offline-first. Dilengkapi visual cincin target harian, pencatatan transaksi cepat via numpad, pemisahan kantong dana (kas, tabungan, rekening bank), pengunci PIN & biometrik, serta pencadangan lokal.
             </p>
             <div class="tech-stack-row">
-              <span class="tech-pill">Flutter 3.x</span>
-              <span class="tech-pill">Dart 3.x</span>
-              <span class="tech-pill">Offline-First SQLite</span>
-              <span class="tech-pill">Deterministic Unit Tests (29/29)</span>
-              <span class="tech-pill">Concentric Rings UI</span>
-              <span class="tech-pill">Biometric / PIN Vault</span>
-              <span class="tech-pill">Multi-Pocket Management</span>
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Dart</span>
+              <span class="tech-pill">SQLite</span>
+              <span class="tech-pill">Unit Tests (29 Passed)</span>
+              <span class="tech-pill">PIN & Biometric</span>
               <span class="tech-pill">Release APK</span>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
               <a href="https://github.com/M-Aqilaz/Aegis-Finance-Track/releases/latest/download/AegisFinance-Universal.apk" target="_blank" rel="noreferrer" class="neo-btn" style="background: var(--green); color: #000; font-size: 0.85rem;">
-                📥 Unduh APK Siap Pakai (v1.0.0)
+                📥 Unduh APK Siap Pakai
               </a>
               <a href="https://github.com/M-Aqilaz/Aegis-Finance-Track" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="font-size: 0.85rem;">
                 View on GitHub ↗
@@ -1182,23 +1171,21 @@
               <h3 class="project-title">MAPECO — Geospatial Intelligence & Automated n8n Pipeline</h3>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
-              <span class="neo-badge" style="background: var(--yellow);">📊 Geointelligence Dashboard</span>
-              <span class="neo-badge" style="background: var(--purple); color: #fff;">⚙️ n8n Automation Engine</span>
+              <span class="neo-badge" style="background: var(--yellow);">📊 Dashboard Peta</span>
+              <span class="neo-badge" style="background: var(--purple); color: #fff;">⚙️ n8n Automation</span>
             </div>
             <p class="project-desc">
-              Sistem intelijen geospasial terintegrasi yang memantau risiko wilayah Indonesia secara realtime dengan backend otomasi cerdas. <strong>Pipeline n8n</strong> bertugas melakukan <em>grab data</em> RSS berita multi-provinsi secara otomatis, mengelola antrean pemrosesan AI untuk ekstraksi sentimen NLP, memperbarui database terstruktur secara berkala, dan menangani auto-recovery. Hasilnya divisualisasikan langsung pada <strong>Dashboard MAPECO</strong> lengkap dengan peta risiko interaktif (1.500+ pemberitaan terolah), radar sentimen isu regional, serta indikator pangan dan makro ekonomi nasional.
+              Dashboard interaktif untuk memantau isu wilayah dan sentimen daerah di Indonesia. Menggunakan pipeline n8n untuk otomatisasi scraping RSS berita berkala, analisis sentimen NLP, dan visualisasi pemetaan risiko wilayah.
             </p>
             <div class="tech-stack-row">
-              <span class="tech-pill">n8n Workflow Engine</span>
-              <span class="tech-pill">Geospatial Intelligence</span>
-              <span class="tech-pill">NLP Sentiment Analysis</span>
-              <span class="tech-pill">Automated RSS Ingestion</span>
-              <span class="tech-pill">Job Queue Workers</span>
-              <span class="tech-pill">Risk Scoring Model</span>
-              <span class="tech-pill">Webhooks</span>
+              <span class="tech-pill">n8n Automation</span>
+              <span class="tech-pill">Geospatial Map</span>
+              <span class="tech-pill">NLP Sentiment</span>
+              <span class="tech-pill">RSS Scraper</span>
+              <span class="tech-pill">REST API</span>
             </div>
-            <div class="doodle-font" style="color: var(--pink); font-size: 1.15rem;">
-              Geser slide di samping untuk melihat UI Dashboard & Alur Pipeline ⤹
+            <div class="doodle-font" style="color: var(--pink); font-size: 1.05rem;">
+              Geser slide di samping untuk melihat UI Dashboard & Pipeline ⤹
             </div>
           </div>
 
@@ -1258,7 +1245,7 @@
               <span class="neo-badge" style="background: var(--orange); color: #fff;">AI Platform</span>
             </div>
             <p class="project-desc">
-              Platform pembelajaran cerdas all-in-one yang mengintegrasikan <strong>Token-based LLM API (OpenRouter/OpenAI)</strong> untuk AI Tutor kontekstual, ringkasan berkas, flashcards, dan kuis adaptif. Dilengkapi background queues (Laravel Queue) dan WebSockets (Laravel Reverb) untuk ruang belajar realtime.
+              Platform belajar dengan integrasi AI (OpenRouter API) untuk tanya-jawab tutor, ringkasan berkas materi, kuis, dan flashcard. Menggunakan Laravel 13 dan WebSockets untuk ruang belajar realtime.
             </p>
           </div>
           <div>
@@ -1288,7 +1275,7 @@
               <span class="neo-badge" style="background: var(--green);">ML & NLP</span>
             </div>
             <p class="project-desc">
-              Sistem klasifikasi teks dan verifikasi berita hoax berbahasa Indonesia berbasis NLP. Dilengkapi automated RSS feed scraper dari kantor berita terpercaya (Antara, CNN, CNBC) untuk kurasi dataset ground-truth serta studio web Flask interaktif.
+              Aplikasi klasifikasi dan verifikasi berita hoax berbahasa Indonesia berbasis NLP. Dilengkapi scraper RSS berita untuk pengumpulan dataset dan antarmuka web Flask.
             </p>
           </div>
           <div>
@@ -1318,7 +1305,7 @@
               <span class="neo-badge" style="background: var(--cyan);">Gamification</span>
             </div>
             <p class="project-desc">
-              Aplikasi produktivitas berbasis gamifikasi RPG yang mengubah target dan kebiasaan harian menjadi quest, pertarungan raid boss mingguan interaktif (Boss Battle), streak konsistensi, dan in-app economy menggunakan Prisma ORM dan Next.js 16.
+              Aplikasi produktivitas bertema gamifikasi RPG yang mengubah tugas harian menjadi quest, pertarungan boss mingguan, streak konsistensi, dan in-app economy.
             </p>
           </div>
           <div>
@@ -1335,36 +1322,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 5: 244107020128-mobile-course -->
-        <div class="project-card">
-          <div class="project-thumb-box" onclick="openLightbox('mobile_course_preview.png')">
-            <img src="mobile_course_preview.png" alt="Mobile Development Coursework & Architecture" class="project-thumb-img" style="object-position: top center;">
-            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
-          </div>
-          <div>
-            <div class="project-top">
-              <h3 class="project-title">Mobile Engineering Coursework</h3>
-              <span class="neo-badge" style="background: var(--yellow); color: #000;">Flutter & Dart</span>
-            </div>
-            <p class="project-desc">
-              Dokumentasi 16-minggu rekayasa aplikasi mobile di Polinema: penerapan Riverpod state management, integrasi REST API Dio, arsitektur offline-first SQLite, feature-first Clean Architecture, integrasi AI Chat Assistant dengan streaming tokens, serta profiling performa CPU/Memory via Flutter DevTools.
-            </p>
-          </div>
-          <div>
-            <div class="tech-stack-row">
-              <span class="tech-pill">Flutter</span>
-              <span class="tech-pill">Dart</span>
-              <span class="tech-pill">Riverpod</span>
-              <span class="tech-pill">Clean Architecture</span>
-              <span class="tech-pill">SQLite</span>
-              <span class="tech-pill">AI Assistant</span>
-              <span class="tech-pill">DevTools</span>
-            </div>
-            <a href="https://github.com/M-Aqilaz/244107020128-mobile-course" target="_blank" rel="noreferrer" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
-              View on GitHub ↗
-            </a>
-          </div>
-        </div>
+
 
 
       </div>
