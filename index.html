@@ -582,162 +582,214 @@
       font-weight: 700;
     }
 
-    /* Neobrutalist Project Slider */
-    .slider-tabs {
+    /* Neobrutalist Lightbox Modal Gallery */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      cursor: zoom-out;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .lightbox-modal.active {
       display: flex;
-      gap: 8px;
-      margin-bottom: 12px;
+      opacity: 1;
+    }
+
+    .lightbox-dialog {
+      position: relative;
+      max-width: 1040px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 3.5px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 10px 10px 0 var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: default;
+      animation: modalPop 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalPop {
+      from { transform: scale(0.94); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .lightbox-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      background: var(--bg);
+      border-bottom: 2.5px solid var(--border);
+      gap: 12px;
+    }
+
+    .lightbox-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
-    .slider-tab-btn {
+    .lightbox-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .lightbox-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      color: #000;
+    }
+
+    .lightbox-counter {
       font-family: 'Space Mono', monospace;
       font-size: 0.8rem;
       font-weight: 700;
-      padding: 7px 14px;
+      background: var(--yellow);
+      color: #000;
+      padding: 4px 10px;
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      box-shadow: 2px 2px 0 var(--border);
+      white-space: nowrap;
+    }
+
+    .lightbox-close-btn {
+      width: 36px;
+      height: 36px;
+      background: var(--pink);
+      color: #fff;
       border: 2px solid var(--border);
       border-radius: 8px;
-      background: var(--card-bg);
-      color: var(--text);
-      cursor: pointer;
       box-shadow: 2px 2px 0 var(--border);
+      font-size: 1.25rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
       transition: all 0.15s ease;
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    .lightbox-close-btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0 var(--border);
+    }
+
+    .lightbox-stage {
+      position: relative;
+      width: 100%;
+      height: 58vh;
+      min-height: 280px;
+      max-height: 620px;
+      background: #080c14;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
       user-select: none;
     }
 
-    .slider-tab-btn:hover {
-      transform: translate(-1px, -1px);
-      box-shadow: 3px 3px 0 var(--border);
-    }
-
-    .slider-tab-btn.active {
-      background: var(--yellow);
-      color: #000;
-      box-shadow: 2px 2px 0 var(--border);
-      transform: translate(1px, 1px);
-    }
-
-    .slider-container {
-      position: relative;
+    .lightbox-img-wrap {
       width: 100%;
-      border: 3px solid var(--border);
-      box-shadow: 5px 5px 0 var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .slider-stage {
-      position: relative;
-      width: 100%;
-      height: 310px;
-      overflow: hidden;
-      cursor: pointer;
-      background: #090d16;
-    }
-
-    .slider-stage-mobile {
-      height: 380px;
-      background: #06090e;
-    }
-
-    .slider-stage-mobile .slider-slide img {
-      object-fit: contain;
-      padding: 6px 0;
-    }
-
-    @media (max-width: 860px) {
-      .slider-stage-mobile {
-        height: 320px;
-      }
-    }
-
-    .slider-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.28s ease, transform 0.28s ease;
-      transform: scale(0.98);
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 10px;
     }
 
-    .slider-slide.active {
-      opacity: 1;
-      visibility: visible;
-      transform: scale(1);
-    }
-
-    .slider-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+      transition: opacity 0.18s ease;
       display: block;
     }
 
-    .slider-stage:hover .zoom-pill {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    .slider-nav-btn {
+    .lightbox-nav-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
       background: var(--yellow);
       color: #000;
-      border: 2px solid #000;
+      border: 2.5px solid #000;
       box-shadow: 3px 3px 0 #000;
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 900;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
-      font-size: 1.1rem;
       cursor: pointer;
       z-index: 10;
       transition: all 0.15s ease;
       user-select: none;
     }
 
-    .slider-nav-btn:hover {
-      transform: translateY(-50%) scale(1.08);
-      box-shadow: 4px 4px 0 #000;
+    .lightbox-nav-btn:hover {
+      transform: translateY(-50%) translate(-2px, -2px);
+      box-shadow: 5px 5px 0 #000;
     }
 
-    .slider-nav-btn:active {
-      transform: translateY(-50%) scale(0.96);
+    .lightbox-nav-btn:active {
+      transform: translateY(-50%) translate(1px, 1px);
+      box-shadow: 1px 1px 0 #000;
     }
 
-    .slider-nav-prev { left: 12px; }
-    .slider-nav-next { right: 12px; }
+    .lightbox-nav-prev { left: 14px; }
+    .lightbox-nav-next { right: 14px; }
 
-    .slider-meta-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .lightbox-footer {
+      padding: 12px 18px;
       background: var(--card-bg);
-      border-top: 2px solid var(--border);
-      padding: 8px 14px;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.78rem;
+      border-top: 2.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .lightbox-caption {
+      font-size: 0.9rem;
       font-weight: 700;
       color: var(--text);
-    }
-
-    .slider-dots {
       display: flex;
-      gap: 6px;
       align-items: center;
+      gap: 8px;
     }
 
-    .slider-dot {
-      width: 10px;
-      height: 10px;
+    .lightbox-dots {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .lightbox-dot {
+      width: 11px;
+      height: 11px;
       border: 2px solid var(--border);
       border-radius: 50%;
       background: var(--bg);
@@ -745,55 +797,37 @@
       transition: all 0.15s ease;
     }
 
-    .slider-dot.active {
+    .lightbox-dot.active {
       background: var(--pink);
-      transform: scale(1.2);
+      transform: scale(1.25);
     }
 
-    /* Modal Image Lightbox */
-    .lightbox-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      cursor: zoom-out;
-    }
-
-    .lightbox-modal.active {
-      display: flex;
-    }
-
-    .lightbox-content {
-      max-width: 95%;
-      max-height: 90vh;
-      border: 4px solid var(--yellow);
-      box-shadow: 12px 12px 0 #000;
-      border-radius: 8px;
-      object-fit: contain;
-      background: #000;
-    }
-
-    .lightbox-close {
+    /* Thumbnail Gallery Badge on Cards */
+    .gallery-badge {
       position: absolute;
-      top: 25px;
-      right: 25px;
-      background: var(--pink);
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
       color: #fff;
-      border: 3px solid #000;
-      box-shadow: 4px 4px 0 #000;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: 1.2rem;
-      width: 44px;
-      height: 44px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      border-radius: 6px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      cursor: pointer;
+      gap: 5px;
+      z-index: 4;
+      pointer-events: none;
+      transition: all 0.15s ease;
+    }
+
+    .project-thumb-box:hover .gallery-badge {
+      background: var(--yellow);
+      color: #000;
+      border-color: #000;
     }
 
     /* Experience Timeline */
@@ -973,10 +1007,36 @@
   <!-- Top Progress Bar -->
   <div class="progress-bar" id="progressBar"></div>
 
-  <!-- Lightbox Modal -->
-  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
-    <div class="lightbox-close">&times;</div>
-    <img src="" alt="Enlarged screenshot" class="lightbox-content" id="lightboxImg">
+  <!-- Lightbox Modal Gallery -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="handleBackdropClick(event)">
+    <div class="lightbox-dialog" id="lightboxDialog" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <div class="lightbox-title-wrap">
+          <span class="lightbox-title" id="lightboxTitle">Project Showcase</span>
+          <span class="lightbox-badge" id="lightboxBadge" style="background: var(--yellow);">AI</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+          <button type="button" class="lightbox-close-btn" onclick="closeLightbox()" title="Tutup (Esc)">&times;</button>
+        </div>
+      </div>
+      
+      <div class="lightbox-stage" id="lightboxStage">
+        <button type="button" class="lightbox-nav-btn lightbox-nav-prev" id="lightboxPrevBtn" onclick="prevSlide()" title="Sebelumnya (←)">❮</button>
+        <div class="lightbox-img-wrap">
+          <img src="" alt="Project Screenshot" class="lightbox-img" id="lightboxImg">
+        </div>
+        <button type="button" class="lightbox-nav-btn lightbox-nav-next" id="lightboxNextBtn" onclick="nextSlide()" title="Selanjutnya (→)">❯</button>
+      </div>
+
+      <div class="lightbox-footer">
+        <div class="lightbox-caption" id="lightboxCaption">
+          <span>📸</span>
+          <span id="lightboxCaptionText">Deskripsi Screenshot</span>
+        </div>
+        <div class="lightbox-dots" id="lightboxDots"></div>
+      </div>
+    </div>
   </div>
 
   <!-- Navbar -->
@@ -1086,9 +1146,10 @@
 
         <!-- PROJECT 1: Aegis Finance -->
         <div class="project-card">
-          <div class="project-thumb-box" onclick="openLightbox('aegis_finance_preview.png')">
+          <div class="project-thumb-box" onclick="openGallery('aegis')">
             <img src="aegis_finance_preview.png" alt="Aegis Finance Personal Wealth Guardian" class="project-thumb-img" style="object-position: top center;">
-            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+            <span class="gallery-badge">📸 3 Foto</span>
+            <div class="zoom-pill">🔍 Buka Galeri</div>
           </div>
           <div>
             <div class="project-top">
@@ -1115,9 +1176,10 @@
 
         <!-- PROJECT 2: MAPECO -->
         <div class="project-card">
-          <div class="project-thumb-box" onclick="openLightbox('mapeco_dashboard.png')">
+          <div class="project-thumb-box" onclick="openGallery('mapeco')">
             <img src="mapeco_dashboard.png" alt="MAPECO Geospatial Dashboard" class="project-thumb-img">
-            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+            <span class="gallery-badge">📸 2 Foto</span>
+            <div class="zoom-pill">🔍 Buka Galeri</div>
           </div>
           <div>
             <div class="project-top">
@@ -1135,17 +1197,18 @@
               <span class="tech-pill">NLP Sentiment</span>
               <span class="tech-pill">RSS Scraper</span>
             </div>
-            <a href="javascript:void(0)" onclick="openLightbox('mapeco_dashboard.png')" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
-              View Showcase 🔍
+            <a href="javascript:void(0)" onclick="openGallery('mapeco')" class="neo-btn neo-btn-white" style="width: 100%; font-size: 0.85rem;">
+              Lihat Galeri Sistem (2 Foto) 🔍
             </a>
           </div>
         </div>
 
         <!-- PROJECT 3: Nalarin.ai -->
         <div class="project-card">
-          <div class="project-thumb-box" onclick="openLightbox('nalarin_landing.png')">
+          <div class="project-thumb-box" onclick="openGallery('nalarin')">
             <img src="nalarin_landing.png" alt="Nalarin.ai AI Learning Platform Landing Page" class="project-thumb-img">
-            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+            <span class="gallery-badge">📸 4 Foto</span>
+            <div class="zoom-pill">🔍 Buka Galeri</div>
           </div>
           <div>
             <div class="project-top">
@@ -1172,9 +1235,10 @@
 
         <!-- PROJECT 4: HoaxCheckML -->
         <div class="project-card">
-          <div class="project-thumb-box" onclick="openLightbox('hoaxcheck_preview.png')">
+          <div class="project-thumb-box" onclick="openGallery('hoaxcheck')">
             <img src="hoaxcheck_preview.png" alt="HoaxCheck Studio ML Detector & Dashboard" class="project-thumb-img">
-            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+            <span class="gallery-badge">📸 3 Foto</span>
+            <div class="zoom-pill">🔍 Buka Galeri</div>
           </div>
           <div>
             <div class="project-top">
@@ -1201,9 +1265,10 @@
 
         <!-- PROJECT 5: InterSelf -->
         <div class="project-card">
-          <div class="project-thumb-box" onclick="openLightbox('interself_preview.png')">
+          <div class="project-thumb-box" onclick="openGallery('interself')">
             <img src="interself_preview.png" alt="InterSelf Gamified RPG Productivity Dashboard" class="project-thumb-img">
-            <div class="zoom-pill">🔍 Klik untuk Zoom</div>
+            <span class="gallery-badge">📸 1 Foto</span>
+            <div class="zoom-pill">🔍 Buka Galeri</div>
           </div>
           <div>
             <div class="project-top">
@@ -1462,24 +1527,195 @@
 
     setTimeout(matrixDecode, 400);
 
-    // Lightbox Modal for Screenshots
-    const lightboxModal = document.getElementById('lightboxModal');
-    const lightboxImg = document.getElementById('lightboxImg');
+    // Neobrutalist Lightbox Modal Gallery Data
+    const projectGalleries = {
+      'aegis': {
+        title: 'Aegis Finance',
+        badge: 'Flutter • 100% Offline-First',
+        badgeColor: 'var(--green)',
+        slides: [
+          { src: 'aegis_finance_preview.png', caption: 'Dashboard Overview — Cincin Target Pengeluaran Harian & Multi-Kantong Saldo' },
+          { src: 'aegis_history_preview.png', caption: 'Riwayat Transaksi — Input Numpad Cepat, Filter Kategori & Log Pengeluaran' },
+          { src: 'aegis_mascot_logo.jpg', caption: 'Brand Identity & Visual Maskot Aegis Finance' }
+        ]
+      },
+      'mapeco': {
+        title: 'MAPECO',
+        badge: 'Geospatial • Risk Monitor',
+        badgeColor: 'var(--yellow)',
+        slides: [
+          { src: 'mapeco_dashboard.png', caption: 'Dashboard Geospasial — Peta Risiko Provinsi & Monitoring Isu Daerah' },
+          { src: 'n8n_workflow.png', caption: 'Pipeline Otomatisasi n8n — Ekstraksi NLP Sentimen Berita & RSS Ingestion' }
+        ]
+      },
+      'nalarin': {
+        title: 'Nalarin.ai',
+        badge: 'Laravel 13 • OpenRouter AI',
+        badgeColor: 'var(--orange)',
+        slides: [
+          { src: 'nalarin_landing.png', caption: 'Landing Page Utama — Platform Edukasi AI Modern (E2E Test Playwright)' },
+          { src: 'nalarin_dashboard.png', caption: 'Dashboard Pembelajaran — Metrik Belajar, Ringkasan & Manajemen Materi' },
+          { src: 'nalarin_tutor.png', caption: 'AI Tutor Chatbot — Tanya Jawab Kontekstual Berbasis Materi Siswa' },
+          { src: 'nalarin_quiz.png', caption: 'Modul Evaluasi — Generator Kuis Interaktif & Flashcard AI' }
+        ]
+      },
+      'hoaxcheck': {
+        title: 'HoaxCheckML',
+        badge: 'Python • Scikit-Learn NLP',
+        badgeColor: 'var(--green)',
+        slides: [
+          { src: 'hoaxcheck_preview.png', caption: 'HoaxCheck Studio — Real-time Text Detector & Radar Probabilitas' },
+          { src: 'hoaxcheck_pipeline.png', caption: 'ML Pipeline — Normalisasi Teks, TF-IDF Vectorizer & Ingestion' },
+          { src: 'hoaxcheck_benchmark.png', caption: 'Benchmark Model — Evaluasi Akurasi, Precision & Recall Naive Bayes' }
+        ]
+      },
+      'interself': {
+        title: 'InterSelf',
+        badge: 'Next.js 16 • RPG Gamification',
+        badgeColor: 'var(--cyan)',
+        slides: [
+          { src: 'interself_preview.png', caption: 'RPG Productivity Dashboard — Daily Quest, Boss Fight & Habit Tracker' }
+        ]
+      }
+    };
 
-    function openLightbox(src) {
-      lightboxImg.src = src;
+    let currentGalleryKey = null;
+    let currentSlideIndex = 0;
+
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxBadge = document.getElementById('lightboxBadge');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaptionText = document.getElementById('lightboxCaptionText');
+    const lightboxDots = document.getElementById('lightboxDots');
+    const lightboxPrevBtn = document.getElementById('lightboxPrevBtn');
+    const lightboxNextBtn = document.getElementById('lightboxNextBtn');
+    const lightboxStage = document.getElementById('lightboxStage');
+
+    function openGallery(key, slideIndex = 0) {
+      if (!projectGalleries[key]) return;
+      currentGalleryKey = key;
+      currentSlideIndex = slideIndex;
+
+      const gallery = projectGalleries[key];
+      lightboxTitle.textContent = gallery.title;
+      lightboxBadge.textContent = gallery.badge;
+      lightboxBadge.style.background = gallery.badgeColor;
+
+      renderLightboxSlide();
+
       lightboxModal.classList.add('active');
       document.body.style.overflow = 'hidden';
+    }
+
+    function openLightbox(src) {
+      for (const [key, gall] of Object.entries(projectGalleries)) {
+        const foundIdx = gall.slides.findIndex(s => s.src === src);
+        if (foundIdx !== -1) {
+          openGallery(key, foundIdx);
+          return;
+        }
+      }
+      lightboxTitle.textContent = 'Screenshot Preview';
+      lightboxBadge.textContent = 'Preview';
+      lightboxBadge.style.background = 'var(--yellow)';
+      lightboxCounter.textContent = '1 / 1';
+      lightboxImg.src = src;
+      lightboxCaptionText.textContent = 'Preview';
+      lightboxPrevBtn.style.display = 'none';
+      lightboxNextBtn.style.display = 'none';
+      lightboxDots.innerHTML = '';
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function renderLightboxSlide() {
+      const gallery = projectGalleries[currentGalleryKey];
+      if (!gallery) return;
+
+      const total = gallery.slides.length;
+      if (currentSlideIndex < 0) currentSlideIndex = total - 1;
+      if (currentSlideIndex >= total) currentSlideIndex = 0;
+
+      const slide = gallery.slides[currentSlideIndex];
+
+      lightboxImg.style.opacity = '0';
+      setTimeout(() => {
+        lightboxImg.src = slide.src;
+        lightboxImg.alt = slide.caption;
+        lightboxImg.style.opacity = '1';
+      }, 70);
+
+      lightboxCounter.textContent = `${currentSlideIndex + 1} / ${total}`;
+      lightboxCaptionText.textContent = slide.caption;
+
+      if (total <= 1) {
+        lightboxPrevBtn.style.display = 'none';
+        lightboxNextBtn.style.display = 'none';
+        lightboxDots.innerHTML = '';
+      } else {
+        lightboxPrevBtn.style.display = 'flex';
+        lightboxNextBtn.style.display = 'flex';
+
+        lightboxDots.innerHTML = gallery.slides.map((_, i) => `
+          <div class="lightbox-dot ${i === currentSlideIndex ? 'active' : ''}" onclick="goToSlide(${i})" title="Foto ${i+1}"></div>
+        `).join('');
+      }
+    }
+
+    function nextSlide() {
+      if (!currentGalleryKey) return;
+      currentSlideIndex++;
+      renderLightboxSlide();
+    }
+
+    function prevSlide() {
+      if (!currentGalleryKey) return;
+      currentSlideIndex--;
+      renderLightboxSlide();
+    }
+
+    function goToSlide(index) {
+      if (!currentGalleryKey) return;
+      currentSlideIndex = index;
+      renderLightboxSlide();
     }
 
     function closeLightbox() {
       lightboxModal.classList.remove('active');
       document.body.style.overflow = '';
+      currentGalleryKey = null;
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target === lightboxModal) {
+        closeLightbox();
+      }
     }
 
     document.addEventListener('keydown', (e) => {
+      if (!lightboxModal.classList.contains('active')) return;
       if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
     });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    lightboxStage.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightboxStage.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) nextSlide();
+        else prevSlide();
+      }
+    }, { passive: true });
   </script>
 
 </body>
